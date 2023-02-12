@@ -15,9 +15,27 @@
     </properties>
 
     <dependencies>
+<!--        <dependency>-->
+<!--            <groupId>com.bobocode.blyznytsia</groupId>-->
+<!--            <artifactId>bring-framework</artifactId>-->
+<!--            <version>1.0.0</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>ioc</groupId>-->
+<!--            <artifactId>bring-ioc</artifactId>-->
+<!--            <version>1.0-SNAPSHOT</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>com.bobocode.svydovets</groupId>-->
+<!--            <artifactId>bring-svydovets</artifactId>-->
+<!--            <version>1.0</version>-->
+<!--        </dependency>-->
+
         <dependency>
-            <groupId>com.breskul.bring</groupId>
+            <groupId>com.hoverla</groupId>
             <artifactId>bring</artifactId>
-            <version>1.0-SNAPSHOT</version>        </dependency>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>

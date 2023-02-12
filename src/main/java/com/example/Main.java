@@ -1,15 +1,29 @@
 package com.example;
 
-import com.breskul.bring.AnnotationConfigApplicationContext;
-import com.example.service.DbService;
-import com.example.service.PrintService;
+import com.example.service.*;
+import com.hoverla.bring.BringApplication;
+import com.hoverla.bring.context.ApplicationContext;
 
 public class Main {
 	public static void main(String[] args) {
-		var context = new AnnotationConfigApplicationContext("com.example");
-		PrintService bean = context.getBean(PrintService.class);
-		bean.print();
-		DbService dbService = context.getBean(DbService.class);
+		ApplicationContext applicationContext = new BringApplication.ApplicationContextBuilder().packagesToScan("com.example")
+				.build();
+
+//		var applicationContext = new AnnotationApplicationContext("com.example");
+//		ApplicationContext applicationContext = context.run();
+
+		WeekDayComponent bean = applicationContext.getBean(WeekDayComponent.class);
+		bean.getWeekDay();
+		HelloComponent bean1 = applicationContext.getBean(HelloComponent.class);
+		bean1.sayHello();
+
+		DbService dbService = applicationContext.getBean(DbService.class);
 		dbService.print();
+
+		PrintService printService = applicationContext.getBean(PrintService.class);
+		printService.print();
+
+		UnknowService unknowService = applicationContext.getBean(UnknowService.class);
+		unknowService.print();
 	}
 }
